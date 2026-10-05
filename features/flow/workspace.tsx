@@ -313,7 +313,9 @@ export function FlowWorkspace() {
                 />
                 <p className={styles.hint}>
                   {mode === "sample"
-                    ? "Fictional example. Switch to Live AI to enter your own enquiry."
+                    ? staticDeployment
+                      ? "Fictional example with pre-written outputs for this public preview."
+                      : "Fictional example. Switch to Live AI to enter your own enquiry."
                     : "Running sends this enquiry to Google Gemini. Free-tier content may improve Google products. Use non-sensitive examples."}
                 </p>
               </>

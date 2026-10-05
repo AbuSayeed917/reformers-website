@@ -1,3 +1,4 @@
+import { staticDeployment } from "../config/deployment";
 export type DemoProduct = {
   id: string;
   name: string;
@@ -51,8 +52,9 @@ export const demoProducts: readonly DemoProduct[] = [
     name: "re:flow",
     monogram: "→",
     tone: "paper",
-    description:
-      "A visual automation studio. Follow an enquiry through AI routing, reply drafting, and human approval. Run a sample or try live AI.",
+    description: staticDeployment
+      ? "A visual automation studio. Explore a sample enquiry through routing, reply drafting, and human approval."
+      : "A visual automation studio. Follow an enquiry through AI routing, reply drafting, and human approval. Run a sample or try live AI.",
     demoUrl: "/demo/flow",
   },
   {
