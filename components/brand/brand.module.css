@@ -1,0 +1,22 @@
+.wordmark {
+  font-size: var(--text-brand);
+  letter-spacing: -1.8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.brand-apostrophe {
+  color: var(--color-accent-text);
+  display: inline-block;
+  transform: rotate(12deg);
+  margin-inline: var(--space-0);
+}
+@media (max-width: 1000px) {
+  .wordmark {
+    font-size: var(--text-heading);
+  }
+}
+@media (max-width: 680px) {
+  .wordmark {
+    font-size: var(--text-heading);
+  }
+}

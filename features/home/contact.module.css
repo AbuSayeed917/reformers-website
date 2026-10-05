@@ -1,0 +1,204 @@
+.contact {
+  background: var(--color-accent);
+  padding-block: var(--space-12) var(--space-20);
+  overflow: hidden;
+}
+.label {
+  color: var(--color-text-on-accent);
+}
+.composition {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  margin-top: var(--space-10);
+}
+.invitation {
+  position: relative;
+}
+.asterisk {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 5rem;
+  line-height: 1;
+  transform: rotate(15deg);
+}
+.invitation h2 {
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.99;
+  margin: 0 0 var(--space-8);
+}
+.invitation h2 em {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+}
+.invitation > p {
+  font-size: var(--text-body);
+  line-height: 1.7;
+  margin: 0 0 var(--space-5);
+}
+.email {
+  font-size: var(--text-small);
+  border-bottom: 1px solid var(--color-border-on-accent);
+  padding-bottom: var(--space-2);
+  overflow-wrap: anywhere;
+}
+.brief {
+  background: var(--color-paper);
+  padding: var(--space-8);
+  transform: rotate(2deg);
+  box-shadow: 12px 12px 0 var(--color-shadow);
+}
+.briefTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: var(--space-5);
+}
+.choices {
+  border: 0;
+  margin: var(--space-6) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+.choices legend {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: var(--text-title);
+  margin-bottom: var(--space-5);
+}
+.choices label:last-child {
+  grid-column: 1/-1;
+}
+.choices label > span {
+  font-size: var(--text-caption);
+  padding: var(--space-3);
+  gap: var(--space-3);
+}
+.ideaLabel {
+  display: block;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+.brief textarea {
+  display: block;
+  resize: vertical;
+  width: 100%;
+  max-height: 350px;
+  min-height: 130px;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-strong);
+  background: transparent;
+  font-family: var(--font-editorial);
+  font-size: var(--text-lead);
+  line-height: 1.65;
+  padding: var(--space-3) 0;
+  color: var(--color-ink);
+  border-radius: 0;
+}
+.brief textarea:focus-visible {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: 4px;
+}
+.brief textarea::placeholder {
+  color: var(--color-text-muted);
+}
+.draftFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+  padding-block: var(--space-3) var(--space-6);
+}
+.sendDraft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: var(--text-small);
+}
+.sendDraft:hover {
+  background: var(--color-surface-inverse-hover);
+}
+.sendDraft > span {
+  font-size: var(--text-title);
+}
+.note {
+  font-size: var(--text-label);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: var(--space-4) 0 0;
+}
+@media (max-width: 1000px) {
+  .composition {
+    gap: var(--space-10);
+  }
+  .brief {
+    padding: var(--space-6);
+  }
+  .asterisk {
+    font-size: 3rem;
+    right: var(--space-4);
+  }
+  .invitation h2 {
+    font-size: 5.5vw;
+  }
+  .choices {
+    grid-template-columns: 1fr;
+  }
+  .choices label:last-child {
+    grid-column: 1;
+  }
+  .briefTop {
+    font-size: var(--text-caption);
+  }
+  .briefTop > span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
+  .contact {
+    padding-block: var(--space-10) var(--space-16);
+  }
+  .composition {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    margin-top: var(--space-8);
+  }
+  .invitation h2 {
+    font-size: 3.75rem;
+  }
+  .asterisk {
+    right: var(--space-3);
+    font-size: 4rem;
+  }
+  .brief {
+    padding: var(--space-5);
+    transform: rotate(1deg);
+  }
+  .choices {
+    grid-template-columns: 1fr 1fr;
+  }
+  .choices label:last-child {
+    grid-column: 1/-1;
+  }
+  .email {
+    font-size: var(--text-label);
+  }
+  .note {
+    font-size: var(--text-label);
+  }
+}

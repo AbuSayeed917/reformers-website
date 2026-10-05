@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.next/
+.vinext/
+.wrangler/
+package-lock.json
+public/
+vendor/
+components/ui/
